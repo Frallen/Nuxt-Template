@@ -1,0 +1,324 @@
+@import "modern-normalize/modern-normalize.css";
+@import "_var";
+@import "_mixins";
+@import "_fonts";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  color: @black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+h1{
+  font-weight: 600;
+  font-size: 2.188em;
+  line-height: 51px;
+  text-transform: uppercase;
+  @media @lg {
+    font-size: 1.750em;
+  }
+  @media @md {
+    font-size: 1.250em;
+  }
+}
+h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2.188em;
+  line-height: 51px;
+  @media @md {
+    font-size: 1.563em;
+  }
+  @media @xs {
+    font-size: 1.2em;
+  }
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 51px;
+  text-transform: uppercase;
+  color: @black;
+  @media @md {
+    font-size: 20px;
+  }
+}
+
+.container {
+  padding: 0 10vw;
+  @media @xxl {
+    padding: 0 7vw;
+  }
+
+  @media @lg {
+    padding: 0 1.3em;
+  }
+  @media @md {
+    padding: 0 1em;
+  }
+  @media @sm {
+    padding: 0 0.5em;
+  }
+}
+
+.page-wrapper {
+  margin: 50px 0 100px;
+  @media @md {
+    margin: 30px 0 50px;
+  }
+}
+
+.badge {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  color: #fff;
+  .br(5px);
+  padding: 5px 9px;
+  margin: 5px 0 0 0;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &-title {
+    display: block;
+    font-size: 2em;
+    color: @black;
+    margin: 0 0 1em 0;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+      margin: 1em 0 0;
+
+
+      .title {
+        display: block;
+        font-size: 1.4em;
+        font-weight: 500;
+        color: @black;
+        margin: 0 0 13px 0;
+        user-select: none;
+      }
+
+      .password-section {
+        position: relative;
+
+        .password {
+          position: absolute;
+          right: 4%;
+          bottom: 24%;
+          cursor: pointer;
+
+          .icon {
+            font-size: 1.5em;
+          }
+        }
+      }
+
+    }
+
+    &-item:first-child {
+      margin: 0;
+    }
+
+    button[type=submit] {
+      margin: 1em 0 0;
+      width: 100%;
+    }
+
+    .type-form {
+      cursor: pointer;
+      text-align: center;
+      font-size: 1.1em;
+      color: @purple;
+      margin: 1.1em 0 0;
+      user-select: none;
+    }
+  }
+
+  .error {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 10px 0 0 0;
+    color: @red;
+  }
+
+}
+
+.input,
+.connect-input {
+  .br(5px);
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 15px 25px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  font-family: "Jost", sans-serif;
+}
+
+.input {
+  color: @gray;
+  border: 1px solid @gray;
+  .trs(0.3s);
+}
+
+.input:focus {
+  color: @black;
+  border: 1px solid @purple !important;
+  .trs(0.3s);
+}
+
+.input-error {
+  border: 1px solid @red !important;
+}
+
+
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.swal2-title {
+  line-height: initial;
+}
+
+.button {
+  .trs(0.3s);
+  text-align: center;
+  display: block;
+  .br(5px);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  text-decoration: none;
+  padding: 15px 25px;
+  width: fit-content;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.button-primary {
+  background: @purple;
+  color: #fff;
+}
+
+.button-primary:hover {
+  .trs(0.3s);
+  background: #8185f9;
+}
+
+
+.button-secondary {
+  background: @orange;
+  .trs(0.3s);
+  color: #fff;
+}
+
+.button-secondary:hover {
+  .trs(0.3s);
+  background: #fab836;
+}
+
+.button-outlined:hover {
+  background: @purple;
+  .trs(0.3s);
+  color: #fff;
+}
+
+.button-outlined {
+  border: 1px solid @purple;
+  color: @purple;
+  background: transparent;
+}
+
+
+.button-white {
+  background: #fff;
+  color: @purple;
+}
+
+
+
+.checkbox {
+  input:checked + .icon {
+    background: url("/checkbox-checked.png");
+    .trs(0.3s);
+  }
+
+  .icon {
+    background: url("/checkbox.png");
+  }
+}
+
+.radio {
+  input:checked + .icon {
+    background: url("/radio-checkbox-checked.png");
+    .trs(0.3s);
+  }
+
+  .icon {
+    .br(10px);
+    background: url("/radio-checkbox.png");
+  }
+}
+
+.checkbox, .radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  input {
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .icon {
+    height: 16px;
+    width: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    .trs(0.3s);
+    background-repeat: no-repeat;
+  }
+
+  .text {
+    margin: 0 0 0 10px;
+  }
+}
+
+

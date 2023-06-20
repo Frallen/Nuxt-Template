@@ -1,0 +1,30 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/image-edge": "^1.0.0-rc.1-28119537.bfe30ab",
+    "@pinia/nuxt": "^0.4.11",
+    "@types/node": "^18",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "modern-normalize": "^2.0.0",
+    "nuxt": "^3.5.2",
+    "nuxt-icon": "^0.4.1",
+    "vee-validate": "^4.9.6"
+  },
+  "dependencies": {
+    "pinia": "^2.1.4",
+    "qs": "^6.11.2",
+    "sweetalert2": "^11.7.12",
+    "@vueuse/core": "^10.2.0",
+    "@vueuse/nuxt": "^10.2.0",
+    "yup": "^1.2.0"
+  }
+}
